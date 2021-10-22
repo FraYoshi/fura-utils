@@ -18,7 +18,7 @@ RED='\033[0;31m'
 NC='\033[0m' # No Color
 
 # metadata assignment
-echo "overwriting metadata on all the file in\n"$PWD"\nproceed?"
+echo -e "overwriting metadata on all the file in\n"$PWD"\nproceed?"
 select yesno in yes no
 do case $yesno in
        "no")
