@@ -14,6 +14,8 @@ fura-reserved-batch.sh "$f";
 done
 ```
 
+for giving a title, description or license link to the file, use the batch-config file, copy the "licensing.sh" into the working directory and personalize it.
+
 # References
 - https://exiftool.org/metafiles.html
 - https://exiftool.org/TagNames/XMP.html
