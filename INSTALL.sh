@@ -1,6 +1,6 @@
 #!/bin/sh -
 mkdir -p ~/bin/fura-utils
-mkdir -p ~/.config/fura-utils
+mkdir -p ~/.config/furayoshi
 find "$(pwd -P)"/bin -type f -name "*.sh" -exec chmod +x "{}" \;
 find bin -type f -name "*.sh" -exec cp "{}" ~/bin/fura-utils/ \;
 cp -r .config/furayoshi ~/.config/
