@@ -50,7 +50,7 @@ fi
     
 while true;
     do sleep $SECS;
-       PROGRESSIVE=$(printf "%0.5i" "$FRAMENUM");
+       PROGRESSIVE=$(printf "%0.6i" "$FRAMENUM");
        ffmpeg -f x11grab -s 1920x1080 -i $DISPLAY+$CAPTURECOORD -frames:v 1 "$TIMELAPSENAME$PROGRESSIVE.$TIMELAPSEEXT";
        FRAMENUM=$((FRAMENUM+1));
 done
