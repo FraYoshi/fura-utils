@@ -1,4 +1,3 @@
-
 #!/bin/bash -
 
 source ~/.config/furayoshi/ffmpeg/ffmpeg.sh
