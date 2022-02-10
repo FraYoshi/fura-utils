@@ -46,11 +46,21 @@ else
     read $TIMELAPSENAME
 fi
 
+if [[ $4 ]]; then
+    TIMELAPSERESOLUTION=$4
+elif
+    [[ $TIMELAPSERESOLUTION ]]; then
+    TIMELAPSERESOLUTION=$TIMELAPSERESOLUTION
+else
+    echo "input a resolution i.e. 1920x1080"
+    read $TIMELAPSERESOLUTION
+fi
+
 ## END of TEST CODE
-    
+
 while true;
     do sleep $SECS;
        PROGRESSIVE=$(printf "%0.6i" "$FRAMENUM");
-       ffmpeg -f x11grab -s 1920x1080 -i $DISPLAY+$CAPTURECOORD -frames:v 1 "$TIMELAPSENAME$PROGRESSIVE.$TIMELAPSEEXT";
+       ffmpeg -f x11grab -s $TIMELAPSERESOLUTION -i $DISPLAY+$CAPTURECOORD -frames:v 1 "$TIMELAPSENAME$PROGRESSIVE.$TIMELAPSEEXT";
        FRAMENUM=$((FRAMENUM+1));
 done
