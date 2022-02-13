@@ -38,7 +38,7 @@ else
     printf "${RED}ERR:${NC} no input file!\n"
 fi
 
-if [ "$2" != 0 ]; then
+if [ -z "$2" ]; then
     printf "${YELLOW}NOTICE:${NC} no Title defined, can be added as second argument\n"
 fi
     
