@@ -1,7 +1,8 @@
 #!/bin/bash -
 
-CRF=32
-PRESET=veryslow
-SCALE=256:-1
+CRF=35
+PRESET=placebo
+SCALE=128:-1
+FRAMERATE=12
 
-ffmpeg -i $1 -c:v libx265 -crf $CRF -preset $PRESET -s $SCALE $2.mov
+ffmpeg -an -i $1 -vf "scale=$SCALE" -r $FRAMERATE -c:v libx265 -crf $CRF -preset $PRESET $2
