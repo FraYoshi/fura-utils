@@ -1,6 +1,15 @@
 #!/bin/bash -
 set -a
+
+# CONCAT
 CONCATLIST=concat-list.txt
+
+# CUT
+CUTSUFFIX=-cut
+
+# GIF
+GIFFPS=10
+GIFSCALE=120:-1
 
 # timelapse
 TIMELAPSENAME=timelapse_
