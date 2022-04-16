@@ -1,7 +1,7 @@
 #!/bin/bash -
 if [ "$1" ] && [ "$2" ]; then
     oldExtension=$1
-    newExtension=$2    
+    newExtension=$2
 elif [ "$1" ] && [ "$2" != 0 ]; then
     oldExtension=$1
     echo "old extension set to $oldExtension"
