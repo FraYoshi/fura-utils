@@ -1,5 +1,9 @@
 #!/bin/bash -
 set -a
+# CUT
+CUTSUFFIX=-cut
+
+# CONCAT
 CONCATLIST=concat-list.txt
 
 # timelapse
