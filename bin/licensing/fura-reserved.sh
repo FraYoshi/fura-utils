@@ -41,6 +41,10 @@ fi
 if [ -z "$2" ]; then
     printf "${YELLOW}NOTICE:${NC} no Title defined, can be added as second argument\n"
 fi
+
+if [ -z "$3" ]; then
+    printf "${YELLOW}NOTICE:${NC} no Description defined, can be added as third argument\n"
+fi
     
 # date is preserved with -P
 # references https://wiki.creativecommons.org/wiki/Marking_Works_Technical
