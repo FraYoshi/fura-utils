@@ -1,7 +1,7 @@
 #!/bin/bash -
 source ~/.config/furayoshi/config.sh
 
-echo "NOTICE: run with sudo -E to preserse configuration varibles"
+echo "NOTICE: run with sudo -E to preserve configuration varibles"
 
 modprobe v4l2loopback exclusive_caps=1 $card_label="$CARDLABEL" max_widht=$V4L2WIDTH max_height=$V4L2HEIGHT video_nr=$V4L2NUMBER \
     && echo -e "Loopback of name $CARDLABEL with max_width $V4L2WIDTH and  max_height $V4L2HEIGHT has been created as Video number $V4L2NUMBER." \
