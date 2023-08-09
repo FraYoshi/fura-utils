@@ -54,4 +54,5 @@ fi
 
 ffmpeg -an -i "$INPUT" -s $HYPERSCALE -c:v libx265 -crf $HYPERCRF -preset $HYPERPRESET -filter:v "setpts=0.$factor*PTS" "$HYPEROUTDIR""${INPUT%.*}""$HYPEREXT".$HYPERFORMAT \
     && touch -r "${INPUT}" "$HYPEROUTDIR""${INPUT%.*}""$HYPEREXT".$HYPERFORMAT \
-    && exiftool -overwrite_original -All= "$HYPEROUTDIR""${INPUT%.*}""$HYPEREXT".$HYPERFORMAT
+    && exiftool -overwrite_original -All= "$HYPEROUTDIR""${INPUT%.*}""$HYPEREXT".$HYPERFORMAT \
+    && touch -r "${INPUT}" "$HYPEROUTDIR""${INPUT%.*}""$HYPEREXT".$HYPERFORMAT
