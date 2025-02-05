@@ -43,6 +43,12 @@ same as **Upgrades** but remove also from your PATH.
 
 `~/.config/furayoshi/`
 
+# Scripts explanation (wip)
+## fura-video-hypercompress
+It is a script to compress a #video to sub-mega sizes, which comes handy when used for previews or licensing where storage used is forever and expensive (like S3).
+
+I personally use it to shasum and store into SafeCreative, where storage costs a lot, considering I'm gonna pay forever and more space = forever higher prices. (in case you are interested in SafeCreative, leave my 10% off: 9XZKH9)
+
 # Support me
 If you want to join others supporting my publications, head to the link below and choose your preferred way to support and thank you in advance!!
 
