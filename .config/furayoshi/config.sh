@@ -4,6 +4,7 @@ set -a
 # colorizations
 RED='\033[0;31m'
 YELLOW='\033[0;33m'
+GREEN='\033[1;32m'
 NC='\033[0m' # No Color
 
 # basename the $0
