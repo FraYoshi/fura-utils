@@ -58,7 +58,7 @@ while true;
        counter=0
        while read coords; do
 	   counter=$((counter+1))
-	   ffmpeg -f x11grab -s $TIMELAPSERESOLUTION -i $DISPLAY+$coords -update 1 -frames:v 1 -vsync 0 -f image2 -compression_level $TIMELAPSE_PNG_COMPRESSION -q:v $TIMELAPSE_JPG_QUALITY $SCREEN_DIR$counter/"$TIMELAPSENAME$PROGRESSIVE.$TIMELAPSEEXT" &
+	   ffmpeg -hide_banner -f x11grab -s $TIMELAPSERESOLUTION -i $DISPLAY+$coords -update 1 -frames:v 1 -vsync 0 -f image2 -compression_level $TIMELAPSE_PNG_COMPRESSION -q:v $TIMELAPSE_JPG_QUALITY $SCREEN_DIR$counter/"$TIMELAPSENAME$PROGRESSIVE.$TIMELAPSEEXT" &
        done < $TIMELAPSE_SCREEN_COORDS
        wait
        FRAMENUM=$((FRAMENUM+1));
