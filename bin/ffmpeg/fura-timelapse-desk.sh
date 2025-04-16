@@ -61,6 +61,6 @@ fi
 while true;
     do sleep $SECS;
        PROGRESSIVE=$(printf "%0.6i" "$FRAMENUM");
-       ffmpeg -hide_banner -f x11grab -s $TIMELAPSERESOLUTION -i $DISPLAY+$CAPTURECOORD -update 1 -frames:v 1 -vsync 0 -f image2 -compression_level $TIMELAPSE_PNG_COMPRESSION -q:v $TIMELAPSE_JPG_QUALITY "$TIMELAPSENAME$PROGRESSIVE.$TIMELAPSEEXT";
+       ffmpeg -hide_banner -f x11grab -s $TIMELAPSERESOLUTION -i $DISPLAY+$CAPTURECOORD -update 1 -frames:v 1 -f image2 -compression_level $TIMELAPSE_PNG_COMPRESSION -q:v $TIMELAPSE_JPG_QUALITY "$TIMELAPSENAME$PROGRESSIVE.$TIMELAPSEEXT";
        FRAMENUM=$((FRAMENUM+1));
 done
