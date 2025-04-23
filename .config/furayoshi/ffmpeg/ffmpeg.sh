@@ -27,9 +27,9 @@ OPUSEXT=opus # ogg is more compatible, opus is suggested.
 
 # timelapse
 TIMELAPSENAME=timelapse_
-TIMELAPSEEXT=png
+TIMELAPSEEXT=jpg
 TIMELAPSE_PNG_COMPRESSION=100
-TIMELAPSE_JPG_QUALITY=5 #1-31
+TIMELAPSE_JPG_QUALITY=7 #1-31
 TIMELAPSERESOLUTION=1920X1080
 CAPTURECOORD=
 TIMELAPSE_SCREEN_COORDS=$HOME/.config/furayoshi/ffmpeg/timelapse-capture-coord.txt
