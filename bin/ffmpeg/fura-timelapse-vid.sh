@@ -9,8 +9,6 @@ if [[ -z $DISPLAY ]]; then
     read DISPLAY
 fi
 
-# SECONDS is an internal variable of Bash, avoid unless want to double time at each run.
-
 if [[ $1 ]]; then
     FPS=$1
 else
