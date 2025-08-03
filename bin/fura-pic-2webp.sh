@@ -12,4 +12,5 @@ if [ "$1" ]; then
     done
 else
     printf "${RED}ERR:${NC} no input file!\n"
+    printf "example usage to convert all PNGs: script-name.sh *.png \n"
 fi
