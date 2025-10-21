@@ -18,7 +18,7 @@ PURPLE='\033[38;5;141m'
 CYAN='\033[38;5;87m'
 
 # Optimized configurations for SSD
-SSD_SCRUB_SETTINGS=("--batch-workers" "8" "--limit" "500" "--throttle" "100")
+SSD_SCRUB_SETTINGS=("--limit" "500M")
 
 # Elegant utility functions
 print_header() {
@@ -276,7 +276,7 @@ optimized_scrub() {
             echo -e "${DIM}Batch workers: 8 | Limit: 500MB/s | Throttle: 100${RESET}"
             echo
             
-            if btrfs scrub start -B -c 2 -n 8 -d 8 ${SSD_SCRUB_SETTINGS[@]} "$mount_point" 2>&1 & then
+            if btrfs scrub start -c 2 -n 7 ${SSD_SCRUB_SETTINGS[@]} "$mount_point" 2>&1 & then
                 local pid=$!
                 spinner $pid
                 wait $pid
@@ -290,7 +290,7 @@ optimized_scrub() {
             print_info "Using HDD-optimized settings"
             echo -e "${DIM}Batch workers: 2 | Limit: 100MB/s${RESET}"
             echo
-            btrfs scrub start -B -c 2 -n 2 -d 2 --limit 100 "$mount_point"
+            btrfs scrub start -c 2 -n 2 --limit 100M "$mount_point"
             ;;
         *)
             print_info "Using default settings"
@@ -318,15 +318,13 @@ priority_scrub() {
     echo
     
     if command -v ionice >/dev/null 2>&1; then
-        ionice -c2 -n0 btrfs scrub start -B \
-            -c 2 -n 8 -d 8 \
-            --batch-workers 8 \
-            --limit 800 \
-            --throttle 50 \
+        ionice -c2 -n0 btrfs scrub start \
+            -c 2 -n 7 \
+            --limit 800M \
             "$mount_point"
     else
         print_warning "ionice not available, using standard priority settings"
-        btrfs scrub start -B -c 2 -n 8 -d 8 --batch-workers 8 --limit 800 "$mount_point"
+        btrfs scrub start -c 2 -n 7 --limit 800M "$mount_point"
     fi
 }
 
