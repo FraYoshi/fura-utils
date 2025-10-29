@@ -25,6 +25,9 @@ OPUSVBR=1 #1 on, 0 off
 OPUSCHANNELLAYOUT=stereo
 OPUSEXT=opus # ogg is more compatible, opus is suggested.
 
+# audio 2flac
+FLAC_COMPRESSION_LV=8
+
 # timelapse
 TIMELAPSENAME=timelapse_
 TIMELAPSERESOLUTION=1920x1080
