@@ -39,7 +39,7 @@ do case $whattodo in
 	   IFS=$SAVEIFS
 	   break
 	   ;;
-       "keep converted")
+       "keep")
 	   SAVEIFS=$IFS
 	   IFS=$(echo -en "\n\b")
 	   find . -iname "$pattern" -print0 \
