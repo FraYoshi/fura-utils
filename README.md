@@ -4,6 +4,10 @@ these are a series of scripts I created to aid in unusual or repetitive tasks.
 
 Sharing so also others could benefit from.
 
+# Dependancies
+- bash
+- [parallel](https://www.gnu.org/software//parallel/parallel.html)
+
 # How to
 ### Auto
 Open a terminal on the fura-utils directory and then run:
