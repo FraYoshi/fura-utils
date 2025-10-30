@@ -56,7 +56,7 @@ do case $whattodo in
 esac
 done
 
-# NOTES on Compression levels from https://www.reddit.com/r/audioengineering/comments/ceqtcd/comment/eu4tiqc/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button:
+# NOTES on Compression levels from https://www.reddit.com/r/audioengineering/comments/ceqtcd/comment/eu4tiqc :
 # Level 	Ratio 1 	Enc Time 1 	Dec Time 1 	Ratio 2 	Enc Time 2 	Dec Time 2
 # 0 	        68.81%  	13.925s 	9.743s 	        67.39%  	8.499s  	6.050s
 # 1 	        48.34%  	13.915s 	9.380s  	66.45%  	8.718s  	6.172s
