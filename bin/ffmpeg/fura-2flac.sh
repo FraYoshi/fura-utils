@@ -10,6 +10,7 @@ else
 fi
 
 echo -en "save location is the same as the original file\n"
+echo -en "WARNING: if the script ends before rearching 100%, you are likely to have some currupted files, check after error, repair/delete, and re-run the script\n"
 echo -en "Audio will be converted from ""$pattern"" to flac and then DELETED. Continue?\n"
 select whattodo in no check yes keep
 do case $whattodo in
