@@ -30,7 +30,7 @@ V4L2PIXELFORMAT=YUYV
 DDBS=1G
 
 # Blender
-BLENDER_BETA_DOWNLOAD_DIR="/FLUX/blender5-download"
+BLENDER_BETA_DOWNLOAD_DIR="/tmp/blender5-download"
 BLENDER_BETA_INSTALL_DIR="/opt/blender/blender5"
 BLENDER_BETA_BIN_LOCATION="/usr/local/bin"
 BLENDER_BETA_BIN_NAME="blender5"
