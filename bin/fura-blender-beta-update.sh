@@ -13,7 +13,6 @@ source "$HOME"/.config/furayoshi/config.sh
 #
 # Requirements:
 #   - lynx
-#   - perl (for shasum)
 #   - wget
 #
 ################################################################################

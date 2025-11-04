@@ -7,6 +7,9 @@ Sharing so also others could benefit from.
 # Dependancies
 - bash
 - [parallel](https://www.gnu.org/software//parallel/parallel.html)
+## Blender
+- lynx
+- wget
 
 # How to
 ### Auto
