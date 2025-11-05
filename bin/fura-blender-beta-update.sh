@@ -3,7 +3,7 @@
 source "$HOME"/.config/furayoshi/config.sh
 
 ################################################################################
-# Blender Beta Downloader, Verifier, and Installer Linux
+# Blender Beta Downloader, Verifier, and Installer for Linux
 # 
 # This script:
 # 1. Downloads the latest Blender beta build from builder.blender.org
