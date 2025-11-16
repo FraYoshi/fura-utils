@@ -45,4 +45,9 @@ BLENDER_RC_INSTALL_DIR="/opt/blender/blender5"
 BLENDER_RC_BIN_LOCATION="/usr/local/bin"
 BLENDER_RC_BIN_NAME="blender5"
 
+# OBS
+OBS_CONFIG_FILE="$HOME/.var/app/com.obsproject.Studio/config/obs-studio/user.ini"
+OBS_PROFILES_DIR="$HOME/.var/app/com.obsproject.Studio/config/obs-studio/basic/profiles"
+OBS_SCENES_DIR="$HOME/.var/app/com.obsproject.Studio/config/obs-studio/basic/scenes"
+
 set +a
