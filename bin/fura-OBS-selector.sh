@@ -6,6 +6,11 @@ OBS_CONFIG_FILE="$HOME/.var/app/com.obsproject.Studio/config/obs-studio/user.ini
 OBS_PROFILES_DIR="$HOME/.var/app/com.obsproject.Studio/config/obs-studio/basic/profiles"
 OBS_SCENES_DIR="$HOME/.var/app/com.obsproject.Studio/config/obs-studio/basic/scenes"
 
+# Warning about names
+echo "!!! WARNING !!!"
+echo -e "${YELLOW}in order to use this script, scene and profile names must have no spaces, hypens, or any symbol, use camelCase or similar techniques, or this script will not work properly!${NC}"
+echo ""
+
 # Check if directories and config file exist
 if [[ ! -d "$OBS_PROFILES_DIR" ]]; then
     echo -e "${RED}Error: Profiles directory not found at $OBS_PROFILES_DIR${NC}"
