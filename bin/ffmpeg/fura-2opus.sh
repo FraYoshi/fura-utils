@@ -9,21 +9,25 @@ else
     read pattern
 fi
 
-echo -en "save location is the same as the original file\n"
+if [ $2 ]; then
+    whattodo="$2"
+else
+    echo -en "save location is the same as the original file\n"
 echo -en "WARNING: if the script ends before rearching 100%, you are likely to have some currupted files, check after error, repair/delete, and re-run the script\n"
-echo -en "Audio will be converted from ""$pattern"" to $OPUSEXT and then DELETED. Continue?\n"
-select whattodo in no check yes keep
-do case $whattodo in
+    echo -en "Audio will be converted from ""$pattern"" to $OPUSEXT and then DELETED. Continue?\n"
+    select whattodo in no check yes keep; do
+	[ -n "$whattodo" ] && break
+    done
+fi
+
+case $whattodo in
        "no")
 	   echo "abort"
-	   break
 	   ;;
        "check")
 	   find . -iname "$pattern" -print0 \
 	       | parallel -0 --dry-run \
-			  'echo "Converting: '"{}"'  →  '"{.}.$OPUSEXT"''
-	   echo -n "you can now re-run the script"
-	   break
+			  ''"{}"'  →  '"{.}.$OPUSEXT"''
 	   ;;
        "yes")
 	   SAVEIFS=$IFS
@@ -39,7 +43,6 @@ do case $whattodo in
 		   && touch -r '"{}"' '"{.}.$OPUSEXT"' \
 		   && rm '"{}"''
 	   IFS=$SAVEIFS
-	   break
 	   ;;
        "keep")
 	   SAVEIFS=$IFS
@@ -54,7 +57,9 @@ do case $whattodo in
 			      '"{.}.$OPUSEXT"' -y \
 		   && touch -r '"{}"' '"{.}.$OPUSEXT"''
 	   IFS=$SAVEIFS
-	   break
+	   ;;
+       *)
+	   echo "$2""is invalid, select a valid option. Valid options are no check yes keep" >&2
+	   exit 1
 	   ;;
 esac
-done
