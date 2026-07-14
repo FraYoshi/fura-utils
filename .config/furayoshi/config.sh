@@ -50,4 +50,14 @@ OBS_CONFIG_FILE="$HOME/.var/app/com.obsproject.Studio/config/obs-studio/user.ini
 OBS_PROFILES_DIR="$HOME/.var/app/com.obsproject.Studio/config/obs-studio/basic/profiles"
 OBS_SCENES_DIR="$HOME/.var/app/com.obsproject.Studio/config/obs-studio/basic/scenes"
 
+# OBSIDIAN FIND ORPHANED
+#OBSIDIAN_ORPH_VAULT="/path/to/your/vault"
+## comma separated values
+OBSIDIAN_ORPH_EXCLUDE_DIRS=".trash,.obsidian,.git"
+OBSIDIAN_ORPH_EXCLUDE_EXT=".md,.base,.gitignore,.gitattributes"
+OBSIDIAN_ORPH_EXCLUDE_FILES=".gitignore,.gitattributes,.gitmodules"
+## if set, only these extensions and directories will be part of the search.
+#OBSIDIAN_ORPH_ONLY_DIRS="media"
+#OBSIDIAN_ORPH_ONLY_EXT=".png,.jpg,.jpeg,.jxl,.webp,.gif,.svg,.pdf,.mp4,.webm,.mov,.mp3,.wav,.flac,.ogg,.opus"
+
 set +a
